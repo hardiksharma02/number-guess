@@ -56,7 +56,24 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+.description {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #eee;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.number.win {
+  font-size: 8rem;
+  color: #fff;
+}
+.number:hover{
+  filter: none;
+}
 .number {
+  filter: blur(3px);
   background: #eee;
   color: #333;
   font-size: 6rem;
@@ -67,6 +84,8 @@ h1 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
+  transition: font-size 0.5s, color 0.5s;
+
 }
 
 .between {
@@ -129,4 +148,54 @@ check:hover {
 
 .label-score {
   margin-bottom: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    height: 25vh;
+  }
+
+  main {
+    height: 75vh;
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .number {
+    font-size: 4rem;
+    filter: none;
+  }
+
+  .between,
+  .again {
+    font-size: 1.2rem;
+  }
+
+  .guess {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .check {
+    padding: 1.5rem 2rem;
+  }
+
+  .label-score {
+    margin-bottom: 1rem;
+  }
 }
